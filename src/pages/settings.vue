@@ -95,7 +95,7 @@
       if (newPassword.value) updatedData.password = newPassword.value;
   
       // Make the API request to update user details
-      const response = await axios.put(`http://localhost:8000/api/users/${userId}`, updatedData);
+      const response = await axios.put(`https://free-food-api.onrender.com/api/users/${userId}`, updatedData);
   
       if (response.status === 200) {
         alert('User details updated successfully');
@@ -112,7 +112,7 @@
       const confirmDelete = confirm('Are you sure you want to delete your account? This action cannot be undone.');
       if (!confirmDelete) return;
   
-      const response = await axios.delete(`http://localhost:8000/api/users/${userId}`);
+      const response = await axios.delete(`https://free-food-api.onrender.com/api/users/${userId}`);
   
       if (response.status === 200) {
         localStorage.removeItem('userId'); // Clear localStorage
