@@ -84,11 +84,6 @@ import axios from 'axios';  // Import Axios
 import { useRouter } from 'vue-router';
 const router = useRouter();
 
-// Define emits
-const emit = defineEmits<{
-  (event: 'submit', details: { fname: string; lname: string; email: string, username: string; password: string; }): void;
-}>();
-
 // Form state and fields
 const fname = ref('');
 const lname = ref('');
